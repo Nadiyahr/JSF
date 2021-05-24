@@ -37,16 +37,21 @@ console.log(isAdult);
 
 //-------Task 6-------//
 
-let firstName, lastName, studieGroup, year;
+let firstName, lastName, group, year;
 
-firstName = 'Nadia'; //string
-lastName = 'Hrabcenko'; //string
-studieGroup = 602; //number
-year = 1979; //number
+firstName = 'Nadia';
+lastName = 'Hrabcenko';
+group = 602;
+year = 1979;
+let isMaried = true;
 
-let isMaried = true; //boolean
+const getType_firstName = typeof firstName;
+const getType_lastName = typeof lastName;
+const getType_grpoup = typeof group;
+const getType_year = typeof year;
+const getType_isMaried = typeof isMaried;
 
-console.log(studieGroup, year, isMaried, firstName, lastName);
+console.log(getType_isMaried, getType_year, getType_grpoup, getType_lastName, getType_firstName);
 
 let isNull = null;
 let isUndef;
@@ -63,7 +68,7 @@ document.write(`Dear ${user}, your email is ${mail}, your password is ${pass}.<b
 
 //-------Task 8-------//
 
-let hour = 3600;
+let hour = 60 * 60;
 let day = 24 * hour;
 let month = 30 * day;
 
@@ -170,9 +175,9 @@ else {
 //------Task 6------//
 
 
-let a = +prompt('Enter the value of the first side of the triangle', '');
-let b = +prompt('Enter the value of the second side of the triangle', '');
-let c = +prompt('Enter the value of the third side of the triangle', '');
+let a = +prompt('Enter the value of the first side of the triangle', 'Side A');
+let b = +prompt('Enter the value of the second side of the triangle', 'Side B');
+let c = +prompt('Enter the value of the third side of the triangle', 'Side C');
 console.log(isNaN(a));
  if (a === 0 || isNaN(a) || b === 0 || isNaN(b) || c === 0 || isNaN(c)) {
    console.log('Incorect data');
@@ -242,4 +247,50 @@ else if (hour >= 17 && hour < 23) {
 }
 else {
   document.write('Доброї ночі.');
+}
+
+
+//------Homework 3------//
+
+
+//------Task 1------//
+
+
+const array = [2,3,4,5];
+let multi = 1;
+
+for (let i = 0; i < array.length; i++) {
+  multi *= array[i];
+}
+
+console.log('result ' + multi);
+
+let m_while = 1;
+let count = 0;
+
+while (count < array.length) {
+  m_while *= array[count];
+}
+
+console.log('While result ' + m_while);
+
+
+//------Task 2------//
+
+
+let check = '';
+
+for (let i = 0; i <= 15; i++) {
+  if (i % 2 === 0) {
+    check += `${i} is even.<br>`;
+  }
+  else {
+    check += `${i} is odd.<br>`
+  }
+}
+
+document.write(check);
+
+function randArray(k) {
+
 }
