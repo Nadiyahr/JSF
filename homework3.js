@@ -40,10 +40,6 @@ for (let i = 0; i <= 15; i++) {
 
 document.write(check);
 
-function randArray(k) {
-
-}
-
 
 //------Task 3------//
 
