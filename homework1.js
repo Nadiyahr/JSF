@@ -60,9 +60,9 @@ console.log(typeof isNull, typeof isUndef);
 
 //-------Task 7-------//
 
-let user = prompt('Enter your usernamee here.', '');
-let mail = prompt('Enter your email address here.', '');
-let pass = prompt('Enter your password here.', '');
+let user = prompt('Enter your usernamee here.', 'Username');
+let mail = prompt('Enter your email address here.', 'Email');
+let pass = prompt('Enter your password here.', 'Password');
 
 document.write(`Dear ${user}, your email is ${mail}, your password is ${pass}.<br>`);
 
@@ -156,15 +156,15 @@ document.write(`<br>${cities.join(' * ')}<br>`);
 
 
 
-let isAdult = +prompt('How old are you?', 'Enter here your age');
+let isAdult1 = +prompt('How old are you?', 'Enter here your age');
 
-if ( isAdult < 10 ) {
+if ( isAdult1 < 10 ) {
   document.write('You are still too yong.<br>');
 }
-else if ( isAdult >= 10 && isAdult < 18 ) {
+else if ( isAdult1 >= 10 && isAdult1 < 18 ) {
   document.write('You are not yet an adult.<br>');
 }
-else if ( isAdult >= 18 && isAdult < 100 ) {
+else if ( isAdult1 >= 18 && isAdult1 < 100 ) {
   document.write('You have reached the age of majority.<br>');
 }
 else {
@@ -217,32 +217,32 @@ console.log(isNaN(a));
 
 
 let now = new Date();
-let hour = now.getHours();
+let getHour = now.getHours();
 
 switch (true) {
-    case hour >= 5 && hour < 11:
+    case getHour >= 5 && getHour < 11:
       document.write('Доброго ранку.');
       break;
 
-    case hour >= 11 && hour < 17:
+    case getHour >= 11 && getHour < 17:
       document.write('Доброго дня.');
       break;
 
-      case hour >= 17 && hour < 23:
+      case getHour >= 17 && getHour < 23:
       document.write('Доброго вечора.');
       break;
 
-      case hour >= 23 && hour < 5:
+      case getHour >= 23 && getHour < 5:
       document.write('Доброї ночі.');
 }
 
-if (hour >= 5 && hour < 11) {
+if (getHour >= 5 && getHour < 11) {
   document.write('Доброго ранку.');
 }
-else if (hour >= 11 && hour < 17) {
+else if (getHour >= 11 && getHour < 17) {
   document.write('Доброго дня.');
 }
-else if (hour >= 17 && hour < 23) {
+else if (getHour >= 17 && grtHour < 23) {
   document.write('Доброго вечора.');
 }
 else {
@@ -360,3 +360,4 @@ function lastElem(arr, num = 1) {
   }
 
   console.log(transformFirst('i love java script') )
+
