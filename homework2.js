@@ -26,20 +26,32 @@ console.log(typeof res4);
 //------Task 2------//
 
 
-let num = prompt('Enter a number here.', 'Enter here a number');
+let num = +prompt('Enter a number here.', 'Enter here a number');
 
-if ( +num > 0 && num % 2 === 0 && +num % 7 === 0 ) {
-  console.log('This number is a multiple of 7, positive and even.');
+// if ( +num > 0 && num % 2 === 0 && +num % 7 === 0 ) {
+//   console.log('This number is a multiple of 7, positive and even.');
+// }
+// else if ( +num > 0 && num % 2 === 0 ) {
+//   console.log('This number is positive and even, but not a multiple of 7.');
+// }
+// else if ( +num > 0 ) {
+//   console.log('This number is positive, but not even and not a multiple of 7.');
+// }
+// else {
+//   console.log('Not a number..');
+// }
+
+if ( num > 0 && num % 2 === 0 ) {
+  console.log('This number is a positive and even.');
 }
-else if ( +num > 0 && num % 2 === 0 ) {
-  console.log('This number is positive and even, but not a multiple of 7.');
+if (num % 7 === 0 ) {
+   console.log('This number is a multiple of 7.');
 }
-else if ( +num > 0 ) {
-  console.log('This number is positive, but not even and not a multiple of 7.');
-}
-else {
+if ( isNaN(num) ) {
   console.log('Not a number..');
 }
+  
+  
 
 
 //------Task 3------//
@@ -47,10 +59,12 @@ else {
 
 const arr = [];
 
-arr[0] = 3;
-arr[1] = 'Ciao';
-arr[2] = true;
-arr[3] = null;
+// arr[0] = 3;
+// arr[1] = 'Ciao';
+// arr[2] = true;
+// arr[3] = null;
+
+arr.push(3, 'Ciao', true, null);
 
 document.write(`${arr.length} `)
 
