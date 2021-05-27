@@ -99,8 +99,8 @@ console.log(lastElem([3, 4, 10, -5], 2));
 
 function transformFirst(str) {
   let first = str.slice(0, 1).toUpperCase();
-  let rest = str.slice(1)
-  return first + rest;
+  let other = str.slice(1)
+  return first + other;
 }
 
 console.log(transformFirst('i love java script'));
