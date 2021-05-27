@@ -108,27 +108,27 @@ console.log(isNaN(a));
 
    console.log(`The area of this triangle is ${s.toFixed(3)}.`);
 
-   //let i, c1, c2;
+//    let i, c1, c2;
 
-   //if ( a > b && a > c ) {
-     //i = a;
-   //  c1 = b;
-   //  c2 = c;
-   //}
-   //else if ( b > a && b > c) {
-     //i = b;
-     //c1 = c;
-     //c2 = a;
-   //}
-   //else {
-     //i = c;
-     //c1 = a;
-     //c2 = b;
-   //}
+//    if ( a > b && a > c ) {
+//      i = a;
+//     c1 = b;
+//     c2 = c;
+//    }
+//    else if ( b > a && b > c) {
+//      i = b;
+//      c1 = c;
+//      c2 = a;
+//    }
+//    else {
+//      i = c;
+//      c1 = a;
+//      c2 = b;
+//    }
 
-   //i ** 2 === c1 ** 2 + c2 ** 2
-    // ? console.log('It\'s a right triangle')
-     //: console.log('It is not a right triangle');
+//    i ** 2 === c1 ** 2 + c2 ** 2
+//     ? console.log('It\'s a right triangle')
+//      : console.log('It is not a right triangle');
 
 
    if (a*a === b*b + c*c || b*b === a*a + c*c || c*c === a*a + b*b) {
