@@ -74,7 +74,7 @@ function showMonthName(month) {
     if (months[month] !== undefined) {
       return months[month];
     } else {
-      throw new MonthException('MonthException', 'Incorrect month number');
+      throw new MonthException('Incorrect month number');
     }
   } catch (err) {
     console.log(err.name, err.message);
