@@ -60,10 +60,10 @@ checkAge()
 //------Task 3------//
 
 
-class MonthException {
-  constructor(name, message) {
-    this.name = name;
-    this.message = message;
+class MonthException extends Error {
+  constructor(message) {
+    super(message);
+    this.name = 'MonthException';
   }
 }
 
