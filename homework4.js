@@ -16,7 +16,7 @@ function calcRectangleArea() {
       alert(w * h);
     }
   } catch (exception) {
-    alert(`${exception.name, exception.message}`);
+    alert(`${exception.name}: ${exception.message}`);
 
   }
 }
@@ -49,7 +49,7 @@ function checkAge() {
     }
   } catch (exception) {
 
-    alert(`${exception.name, exception.message}`);
+    alert(`${exception.name}: ${exception.message}`);
   }
 }
 
@@ -95,10 +95,10 @@ function showUser(id) {
     if (id > 0) {
       return { 'id': id };
     } else {
-      throw Error(': ID must not be negative: ' + id);
+      throw new Error('ID must not be negative: ' + id);
     }
-  } catch (Error) {
-    console.log(Error.name, Error.message);
+  } catch (error) {
+    console.log(error.name + ': ' + error.message);
   }
 }
 
