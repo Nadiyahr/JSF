@@ -29,7 +29,7 @@ calcRectangleArea()
 
 
 function checkAge() {
-  let age = +prompt('Wat\'s your age?');
+  let age = +prompt('What\'s your age?');
   try {
     if (age === 0) {
 
