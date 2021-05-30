@@ -16,8 +16,7 @@ function calcRectangleArea() {
       alert(w * h);
     }
   } catch (exception) {
-    alert(`${exception.name}: ${exception.message}`);
-
+    alert(exception.name + ': ' + exception.message);
   }
 }
 
@@ -32,24 +31,16 @@ function checkAge() {
   let age = +prompt('What\'s your age?');
   try {
     if (age === 0) {
-
       throw new Error('The field is empty! Please enter your age!');
-
     } else if (isNaN(age)) {
-
       throw new Error('Not a number! Please enter a number!');
-
     } else if (age < 14) {
-
       throw new Error('Access denied! You are underage!');
-
     } else {
-
       alert('Good vision of the film!');
     }
   } catch (exception) {
-
-    alert(`${exception.name}: ${exception.message}`);
+    alert(exception.name + ': ' + exception.message);
   }
 }
 
@@ -77,7 +68,7 @@ function showMonthName(month) {
       throw new MonthException('Incorrect month number');
     }
   } catch (err) {
-    console.log(err.name, err.message);
+    console.error(err.name, err.message);
   }
 }
 
@@ -98,7 +89,7 @@ function showUser(id) {
       throw new Error('ID must not be negative: ' + id);
     }
   } catch (error) {
-    console.log(error.name + ': ' + error.message);
+    console.error(error.name + ': ' + error.message);
   }
 }
 
