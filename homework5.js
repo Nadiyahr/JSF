@@ -23,7 +23,7 @@ console.log(propsCount(mentor))
 
 
 const car = {
-  brrand: 'Citroën',
+  brand: 'Citroën',
   model: 'Aircross',
   displacement: 1.6,
   fuel: 'diesel',
