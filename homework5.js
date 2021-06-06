@@ -33,6 +33,7 @@ const car = {
 function showProps(obj) {
   console.log(Object.keys(obj));
   console.log(Object.values(obj).join(' '));
+  console.log(Object.entries(obj).join('\n').replace(/,/g, ' : '));
 }
 
 showProps(car)
