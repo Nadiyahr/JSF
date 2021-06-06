@@ -140,7 +140,7 @@ console.log(worker3.showSalaryWithExperience());
 
 
 function sortedWithSalary() {
-  let arr = [...arguments]
+  const arr = [...arguments]
     .sort((a, b) => a.maxSalary() - b.maxSalary())
     .map(x => x.fullName + ': ' + x.maxSalary());
 
@@ -148,9 +148,9 @@ function sortedWithSalary() {
 }
 
 function sortedWithSalary1() {
-  let arr = [...arguments];
-  let maxExp = Math.max(...arr.map(x => x.showExp));
-  let fArr = arr.filter(x => x.showExp === maxExp)
+  const arr = [...arguments];
+  const maxExp = Math.max(...arr.map(x => x.showExp));
+  const fArr = arr.filter(x => x.showExp === maxExp)
     .sort((a, b) => a.maxSalary() - b.maxSalary())
     .map(x => x.fullName + ': ' + x.maxSalary());
 
