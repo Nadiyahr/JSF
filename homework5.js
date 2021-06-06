@@ -124,7 +124,7 @@ console.log(worker2.fullName);
 console.log(worker2.showSalary())
 console.log("New experience: " + worker2.showExp);
 console.log(worker2.showSalaryWithExperience());
-worker2.setExp = 1.5;
+worker2.setExp = 1.7;
 console.log("New experience: " + worker2.showExp);
 console.log(worker2.showSalaryWithExperience());
 
@@ -142,12 +142,23 @@ console.log(worker3.showSalaryWithExperience());
 function sortedWithSalary() {
   let arr = [...arguments]
     .sort((a, b) => a.maxSalary() - b.maxSalary())
-    .map(x => x.fullName + ': ' + x.maxSalary())
+    .map(x => x.fullName + ': ' + x.maxSalary());
 
   return 'Sorted salary:\n' + arr.join('\n')
 }
 
+function sortedWithSalary1() {
+  let arr = [...arguments];
+  let maxExp = Math.max(...arr.map(x => x.showExp));
+  let fArr = arr.filter(x => x.showExp === maxExp)
+    .sort((a, b) => a.maxSalary() - b.maxSalary())
+    .map(x => x.fullName + ': ' + x.maxSalary());
+
+  return 'Sorted salary:\n' + fArr.join('\n');
+}
+
 console.log(sortedWithSalary(worker1, worker2, worker3));
+console.log(sortedWithSalary1(worker1, worker2, worker3));
 
 
 //------Task 5------//
@@ -212,7 +223,8 @@ class Circle extends GeometricFigure {
 const figures = [new Triangle(4, 5), new Square(7), new Circle(5)];
 
 function handleFigures(arr) {
-  return arr.map(x => `Geometric figure: ${x.toString()} - area: ${x.getArea()}\n`).join('') + arr.map(x => x.getArea()).reduce((a, b) => a + b);
+  return arr.map(x => `Geometric figure: ${x.toString()} - area: ${x.getArea()}\n`).join('') +
+    arr.map(x => x.getArea()).reduce((a, b) => a + b);
 }
 
 
