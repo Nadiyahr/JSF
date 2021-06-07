@@ -28,11 +28,11 @@ calcRectangleArea()
 
 
 function checkAge() {
-  let age = +prompt('What\'s your age?');
+  let age = prompt('What\'s your age?');
   try {
-    if (age === 0) {
+    if (age.trim() === '') {
       throw new Error('The field is empty! Please enter your age!');
-    } else if (isNaN(age)) {
+    } else if (isNaN(parseInt(age))) {
       throw new Error('Not a number! Please enter a number!');
     } else if (age < 14) {
       throw new Error('Access denied! You are underage!');
