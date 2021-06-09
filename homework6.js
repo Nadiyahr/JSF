@@ -5,8 +5,9 @@
 //------Task 1------//
 
 
-let but = document.createElement('button');
-but.onclick = f1;
+// let but = document.createElement('button');
+// but.onclick = f1;
+document.getElementById('test').onclick = f1;
 
 function f1() {
   // document.getElementById('test').innerHTML = 'Last';
@@ -15,7 +16,7 @@ function f1() {
 
   document.getElementsByTagName('div')[0].innerHTML = 'Last';
 }
-document.getElementById('test').after(but);
+// document.getElementById('test').after(but);
 
 
 
@@ -23,10 +24,12 @@ document.getElementById('test').after(but);
 
 
 
-let but2 = document.createElement('button');
-but2.onclick = f2;
+// let but2 = document.createElement('button');
+// but2.onclick = f2;
 
 let img = document.querySelector('.image');
+test.style.margin = '0 0 20px 0';
+img.onclick = f2;
 
 function f2() {
   img.setAttribute("alt", "cat");
@@ -34,7 +37,7 @@ function f2() {
   alert(`${img.outerHTML}`);
 }
 
-img.after(but2)
+// img.after(but2)
 
 
 
