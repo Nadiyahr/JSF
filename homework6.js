@@ -7,7 +7,10 @@
 
 // let but = document.createElement('button');
 // but.onclick = f1;
-document.getElementById('test').onclick = f1;
+
+et test = document.getElementById('test');
+test.style.margin = '0 0 20px 0'
+test.onclick = f1;
 
 function f1() {
   // document.getElementById('test').innerHTML = 'Last';
@@ -28,7 +31,6 @@ function f1() {
 // but2.onclick = f2;
 
 let img = document.querySelector('.image');
-test.style.margin = '0 0 20px 0';
 img.onclick = f2;
 
 function f2() {
