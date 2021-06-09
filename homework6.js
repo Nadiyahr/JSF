@@ -117,7 +117,8 @@ out6.append(but6);
 function f6() {
   input1.value = prompt('Type something');
   input2.value = prompt('Type something else');
-  out6.append('Click again the button to trade)')
+//   out6.append('Click again the button to trade)')
+  but6.innerHTML = 'Trade';
   but6.onclick = () => {
     let t = input1.value;
     input1.value = input2.value;
