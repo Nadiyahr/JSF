@@ -45,7 +45,6 @@ img.after(but2)
 const container = document.querySelector('#text');
 const matches = container.querySelectorAll('div p');
 
-
 matches.forEach((x, i) => console.log(`Selector ${x.parentElement.id} ${i}: ${x.innerHTML}`));
 
 
@@ -59,12 +58,10 @@ const last = list.lastChild.previousSibling
 const second = first.nextElementSibling;
 const third = second.nextElementSibling;
 const fourth = last.previousElementSibling;
-
 console.log(first.innerHTML, last.innerHTML, second.innerHTML, fourth.innerHTML, third.innerHTML);
 
+
 const ulList = document.querySelector('#list').querySelectorAll('ul li');
-
-
 console.log(ulList[0].innerHTML, ulList[4].innerHTML, ulList[1].innerHTML, ulList[3].innerHTML, ulList[2].innerHTML);
 
 
@@ -79,11 +76,10 @@ h1.style.maxWidth = '350px';
 
 const par = document.getElementById('myDiv').querySelectorAll('div p');
 
-for (let i = 0; i < par.length; i++) {
-  par[i].style.textAlign = 'left';
-  par[i].style.fontSize = '20px';
-}
-
+// for (let i = 0; i < par.length; i++) {
+//   par[i].style.fontSize = '20px';
+// }
+par.forEach(x => x.style.fontSize = '20px';
 par[0].style.fontWeight = 800;
 par[1].style.color = 'red';
 par[2].style.textDecoration = 'underline';
