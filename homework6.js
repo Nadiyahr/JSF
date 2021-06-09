@@ -84,7 +84,7 @@ const par = document.getElementById('myDiv').querySelectorAll('div p');
 // for (let i = 0; i < par.length; i++) {
 //   par[i].style.fontSize = '20px';
 // }
-par.forEach(x => x.style.fontSize = '20px';
+par.forEach(x => x.style.fontSize = '20px');
 par[0].style.fontWeight = 800;
 par[1].style.color = 'red';
 par[2].style.textDecoration = 'underline';
