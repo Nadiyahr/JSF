@@ -8,7 +8,7 @@
 // let but = document.createElement('button');
 // but.onclick = f1;
 
-et test = document.getElementById('test');
+let test = document.getElementById('test');
 test.style.margin = '0 0 20px 0'
 test.onclick = f1;
 
