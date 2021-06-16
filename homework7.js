@@ -87,7 +87,12 @@ butt.onmouseleave = () => out.innerHTML += 'Mouse is not on me! <br>';
 
 
 
-// document.body.innerHTML = `Widht: ${screen.width} Height: ${screen.height}`;
+document.getElementsByTagName('body')[0].onresize = () => {
+  var w = window.innerWidth;
+  var h = window.innerHeight;
+  let txt = "Window size: width=" + w + ", height=" + h;
+  document.getElementById('task6').innerHTML = txt;
+}
 
 
 
