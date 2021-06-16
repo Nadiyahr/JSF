@@ -123,6 +123,8 @@ window.onload = window.onload = () => {
 
 countrySelect.addEventListener('change', function() {
   let selectOp = country[this.value];
+  let textOp = this.selectedOptions[0].text;
+  document.getElementById('print').innerHTML = textOp + ', ';
 
   while (citySelect.options.length > 0) {
     citySelect.options.remove(0);
@@ -136,7 +138,7 @@ countrySelect.addEventListener('change', function() {
   citySelect.addEventListener('change', function() {
     countrySelect.value
     // let cityOp = citySelect.value;
-    document.getElementById('print').innerHTML = `${countrySelect.value}, ${citySelect.value}`;
+    document.getElementById('print').innerHTML = citySelect.value;
   })
 })
 
