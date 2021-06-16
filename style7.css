@@ -1,0 +1,35 @@
+select {
+  width: 150px;
+  height: 25px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  /* border-radius: 5px; */
+  border-color: #4f5552;
+  color: #4f5552;
+  border-width: 2px;
+  /* display: flex; */
+}
+
+
+.container {
+  min-width: 200px;
+  min-height: 200px; 
+  max-width: 400px;
+  max-height: 400px;
+  margin: 0em auto 2em;
+  padding: 10px;
+  border: 1px solid #691414;
+  /* border-radius: 10px; */
+  text-align: center;
+  background: white;
+  border-color: #4f5552;
+  border-width: 2px;
+}
+
+button {
+  margin: 10px;
+  /* display:flex; */
+  /* border-radius: 5px; */
+}
