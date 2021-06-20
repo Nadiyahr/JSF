@@ -25,7 +25,7 @@ $('h3').each(function(){
 
 
   $('input[type=checkbox]').on('change', function() {
-    if ($('input[type=checkbox]:checked').length >= 4) {
+    if ($('input[type=checkbox]:checked').length > 3) {
       $(this).prop('checked', false);
       $('#check').text('Allowed only 3')
     }
