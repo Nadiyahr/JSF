@@ -1,4 +1,3 @@
-// console.log('test js ok!!!');
 let currentDate = new Date();
 
 module.exports.date = currentDate;
