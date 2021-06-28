@@ -17,7 +17,7 @@
 
 // http.createServer(function(request, response) {
 //   response.writeHead(200, {'Content-Type': 'text/html'});
-//   response.write(`<h1>System information</h1><p>Curent user name: ${userName}<br>OS type: ${type}<br>System work time ${time}<br>Current work directory: ${dirname}<br>Server file name: ${scriptName}</p>`);
+//   response.write(`<h1>System information</h1><p>Curent user name: ${userName}<br>OS type: ${type}<br>System work time ${(time / 60).toFixed(2)}<br>Current work directory: ${dirname}<br>Server file name: ${scriptName}</p>`);
 //   response.end('<h2>Header from server 5000<h2>\n');
 // }).listen(5000);
 
