@@ -61,17 +61,17 @@ select {
     border-width: 2px
 }
 
-.span ul {
+.weather ul {
   max-width: 400px;
 }
 
-.span ul li:last-of-type {
+.weather ul li:last-of-type {
   position: relative;
   bottom: 20px;
   font-size: 1px;
 }
 
-.span ul li {
+.weather ul li {
   display: inline-block;
   position: relative;
   bottom: 45px;
@@ -84,7 +84,7 @@ select {
   text-align:right;
 }
 
-.span img {
+.weather img {
   max-width:70px;
 }
 
