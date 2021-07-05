@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 12</title>
+</head>
+<body>
+
+  <!-- task 1 -->
+
+  <button id="in" onclick="sendVote()">Vote!</button><br><br>
+
+  <script>
+    // let data = new Date
+    function sendVote() {
+      const ajaxRequest = new XMLHttpRequest();
+      ajaxRequest.open('GET', 'info.txt', true);
+      ajaxRequest.onreadystatechange = function() {
+        if (ajaxRequest.readyState < 4) {
+          document.getElementById('in').innerHTML = 'Loading...';
+        } else if (ajaxRequest.readyState == 4 && ajaxRequest.status == 200) {
+          document.getElementById('in').innerHTML = ajaxRequest.responseText + new Date;
+        }
+      }
+      ajaxRequest.send();
+    }
+  </script>
+
+
+  <!-- task 2 -->
+
+  <button onclick="downloadBooks()">downloadBooks</button>
+  
+  <ul id="authors"></ul>
+
+  <script>
+    let ul = document.getElementById('authors')
+    function downloadBooks() {
+      const ajaxRequest = new XMLHttpRequest();
+      ajaxRequest.open('GET', 'books.json', true);
+      ajaxRequest.onreadystatechange = function() {
+        if (ajaxRequest. readyState == 4 && ajaxRequest.status == 200) {
+          let json = JSON.parse(ajaxRequest.responseText);
+          let li = '';
+          for (let i = 0; i < json.length; i++) {
+            li += `<li>${json[i].author}</li>`;
+          }
+          ul.innerHTML = li;
+        } else {
+          console.log('Error ' + ajaxRequest.status + ': ' + ajaxRequest.readyState)
+        }
+      }
+      ajaxRequest.send()
+    }
+  </script>
+  
+</body>
+</html>
