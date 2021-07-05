@@ -4,47 +4,43 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-::selection{
-  color: #ffff;
-  background: rgb(142, 73, 232);
-}
+
+
 body{
   width: 100%;
   height: 100vh;
-  /* overflow: hidden; */
+  overflow: hidden;
   padding: 10px;
-  background: linear-gradient(to bottom, #fce5f8 0%, #e349e8 100%);
+  background: linear-gradient(to bottom, #f8f7f8 0%, #e393ee 100%);
 }
 
 .span {
-  display: flex;
   width: 100%;
   margin-top: 20px;
-  align-items: center;
-  justify-content: space-between;
 }
 
 .date {
-  /* float: left; */
-  background: #9b6cda;
-  width: 50%;
-  height: 50px;
-  font-size: 30px;
-  padding: 10px;
-  color: white;
-  text-shadow: 2px 2px 4px;
-  border-radius: 3px 0 0 3px;
-
+  float: left;
+  background: #fff;
+  height: 60px;
+  font-size: 28px;
+  padding: 10px 30px;
+  color: rgb(151, 110, 155);
+  border-radius: 10px;
+  margin: 10px;
 }
 
 .weather {
-  /* float: left; */
-  background: #9b6cda;
-  width: 50%;
-  height: 50px;
-  color: white;
-  text-shadow: 2px 2px 4px;
-  border-radius: 0 4px 4px 0;
+  float: right;
+  background: #fff;
+  height: 60px;
+  color: rgb(151, 110, 155);
+  padding: 10px;
+  margin: 10px;
+  padding: 10px 0;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  text-align:right;
 }
 
 select {
@@ -63,6 +59,7 @@ select {
 
 .weather ul {
   max-width: 400px;
+  min-width: 100px;
 }
 
 .weather ul li:last-of-type {
@@ -72,10 +69,9 @@ select {
 }
 
 .weather ul li {
-  display: inline-block;
+  display: inline;
   position: relative;
   bottom: 45px;
-  left: 40px;
   list-style-type: none;
   margin: 10px 10px 10px 10px;
   transition: 0.2s;
@@ -88,25 +84,36 @@ select {
   max-width:70px;
 }
 
+
+
+
+::selection{
+  color: #ffff;
+  background: rgb(142, 73, 232);
+}
+
 .wrapper{
   background: #fff;
   max-width: 400px;
   width: 100%;
-  margin: 100px auto;
+  margin: 60px auto;
   padding: 25px;
   border-radius: 5px;
   box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
 }
+
 .wrapper header{
   font-size: 30px;
   font-weight: 600;
 }
+
 .wrapper .inputField{
   margin: 20px 0;
   width: 100%;
   display: flex;
   height: 45px;
 }
+
 .inputField input{
   width: 85%;
   height: 100%;
@@ -117,9 +124,11 @@ select {
   padding-left: 15px;
   transition: all 0.3s ease;
 }
+
 .inputField input:focus{
   border-color: #8E49E8;
 }
+
 .inputField button{
   width: 50px;
   height: 100%;
@@ -135,34 +144,39 @@ select {
   pointer-events: none;
   transition: all 0.3s ease;
 }
+
 .inputField button:hover,
 .footer button:hover{
   background: #721ce3;
 }
+
 .inputField button.active{
   opacity: 1;
   pointer-events: auto;
 }
+
 .wrapper .todoList{
   max-height: 250px;
   overflow-y: auto;
 }
+
 .todoList li{
   position: relative;
   list-style: none;
   height: 45px;
   line-height: 45px;
   margin-bottom: 8px;
-  background: #f2f2f2;
+  background: #fddefb;
   border-radius: 3px;
   padding: 0 15px;
   cursor: default;
   overflow: hidden;
 }
+
 .todoList li .icon{
   position: absolute;
   right: -45px;
-  background: #e74c3c;
+  background: #94207b;
   width: 45px;
   text-align: center;
   color: #fff;
@@ -170,9 +184,15 @@ select {
   cursor: pointer;
   transition: all 0.2s ease;
 }
+
+.todoList li:hover {
+  background: #b19aaf;
+}
+
 .todoList li:hover .icon{
   right: 0px;
 }
+
 .wrapper .footer{
   display: flex;
   width: 100%;
@@ -180,6 +200,7 @@ select {
   align-items: center;
   justify-content: space-between;
 }
+
 .footer button{
   padding: 6px 10px;
   border-radius: 3px;
@@ -196,6 +217,8 @@ select {
   pointer-events: none;
   transition: all 0.3s ease;
 }
+
+
 .footer button.active{
   opacity: 1;
   pointer-events: auto;
