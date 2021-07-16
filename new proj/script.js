@@ -20,7 +20,7 @@ addBtn.onclick = ()=>{
   }else{
     listArray = JSON.parse(getLocalStorageData);
   }
-  listArray.push(userEnteredValue); 
+  listArray.push([userEnteredValue, 'unchecked']); 
   localStorage.setItem("New Todo", JSON.stringify(listArray));
   showTasks();
   addBtn.classList.remove("active");
@@ -41,10 +41,28 @@ function showTasks(){
   }
   let newLiTag = "";
   listArray.forEach((element, index) => {
-    newLiTag += `<li>${element}<span class="icon" onclick="deleteTask(${index})"><i class="fas fa-trash"></i></span></li>`;
+    newLiTag +=  `<li><input type="checkbox" id="ch" onchange="activeCheck(this, ${index})" class="check" ${element[1]}><span>${element[0]}</span><span class="icon" onclick="deleteTask(${index})"><i class="fas fa-trash"></i></span></li>`;
   });
   todoList.innerHTML = newLiTag;
   inputBox.value = "";
+}
+
+function activeCheck(el, i) {
+  let val = el.nextElementSibling.innerHTML
+  if (el.checked) {
+    let getLocalStorageData = localStorage.getItem("New Todo");
+    listArray = JSON.parse(getLocalStorageData);
+    listArray.splice(i , 1, [val, 'checked']);
+    localStorage.setItem("New Todo", JSON.stringify(listArray));
+    showTasks();
+  } 
+  else {
+    let getLocalStorageData = localStorage.getItem("New Todo");
+    listArray = JSON.parse(getLocalStorageData);
+    listArray.splice(i, 1, [val, 'unchecked']);
+    localStorage.setItem("New Todo", JSON.stringify(listArray));
+    showTasks();
+  }
 }
 
 function deleteTask(index){
