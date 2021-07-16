@@ -66,7 +66,7 @@ function activeCheck(element, index) {
     listArray.splice(index, 1, [textOfCheck, 'checked']);
   }
   else {
-    listArray.splice(index, 1, [textOfCheck, 'unchecked']);
+    listArray.splice(index, 1, [textOfCheck, '']);
   }
   localStorage.setItem("New Todo", JSON.stringify(listArray));
   showTasks();
