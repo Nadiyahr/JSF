@@ -35,11 +35,18 @@
       <ul class="todoList">
       </ul>
       <div class="footer">
-        <span>You have <span class="pendingTasks"></span> pending tasks</span>
-        <button>Clear All</button>
+        <div class="pending">
+          <span>You have <span class="pendingTasks"></span> pending tasks</span>
+          <button id="clear">Clear All</button>
+        </div>
+        <div class="done">
+          <span>You have <span class="doneTasks"></span> done tasks</span>
+          <button id="del">Delete Done</button>
+        </div>
       </div>
     </div>
 
+    
     <script src="date.js"></script>
     <script src="weather.js"></script>
     <script src="script.js"></script>
