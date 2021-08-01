@@ -3,6 +3,8 @@ const addBtn = document.querySelector(".inputField button");
 const todoList = document.querySelector(".todoList");
 const deleteAllBtn = document.querySelector(".footer button");
 
+showTasks();
+
 inputBox.onkeyup = ()=>{
   let userEnteredValue = inputBox.value;
   if(userEnteredValue.trim() != 0){ 
@@ -12,7 +14,28 @@ inputBox.onkeyup = ()=>{
   }
 }
 
-showTasks();
+inputBox.addEventListener('keyup', (e) => {
+  if (e.keyCode === 13){
+    e.preventDefault();
+    enterInput();
+  }
+});
+
+addBtn.onclick = enterInput;
+
+function enterInput() {
+  let userEnteredValue = inputBox.value;
+  let getLocalStorageData = localStorage.getItem("New Todo");
+  if (getLocalStorageData == null) {
+    listArray = [];
+  } else {
+    listArray = JSON.parse(getLocalStorageData);
+  }
+  listArray.push([userEnteredValue, '']);
+  localStorage.setItem("New Todo", JSON.stringify(listArray));
+  showTasks();
+  addBtn.classList.remove("active");
+}
 
 addBtn.onclick = ()=>{ 
   let userEnteredValue = inputBox.value;
