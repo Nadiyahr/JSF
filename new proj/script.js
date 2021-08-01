@@ -44,19 +44,21 @@ function showTasks(){
   }
   let newLiTag = "";
   listArray.forEach((element, index) => {
-    newLiTag +=  `<li><input type="checkbox" id="ch" onchange="activeCheck(this, ${index},${element[0]})" class="check" ${element[1]}><span>${element[0]}</span><span class="icon" onclick="deleteTask(${index})"><i class="fas fa-trash"></i></span></li>`;
+    newLiTag +=  `<li><input type="checkbox" id="ch" onchange="activeCheck(this, ${index})" class="check" ${element[1]}><span>${element[0]}</span><span class="icon" onclick="deleteTask(${index})"><i class="fas fa-trash"></i></span></li>`;
   });
   todoList.innerHTML = newLiTag;
   inputBox.value = "";
 }
 
-function activeCheck(element, index, text) {
+function activeCheck(element, index) {
   let getLocalStorageData = localStorage.getItem("New Todo");
   listArray = JSON.parse(getLocalStorageData);
   if (element.checked) {
-    listArray.splice(index, 1, [text, 'checked']);
+    listArray[index].pop();
+    listArray[index].push('checked');
   } else {
-    listArray.splice(index, 1, [text, '']);
+    listArray[index].pop();
+    listArray[index].push('');
   }
   localStorage.setItem("New Todo", JSON.stringify(listArray));
   showTasks();
