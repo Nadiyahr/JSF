@@ -36,11 +36,18 @@ function showTasks(){
     listArray = JSON.parse(getLocalStorageData); 
   }
   const pendingTasksNumb = document.querySelector(".pendingTasks");
-  pendingTasksNumb.textContent = listArray.length;
+  pendingTasksNumb.textContent = listArray.filter(x => x[1] === '').length;
   if (listArray.length > 0){
     deleteAllBtn.classList.add("active");
   } else {
     deleteAllBtn.classList.remove("active");
+  }
+  const doneTasksNumb = document.querySelector('.doneTasks');
+  doneTasksNumb.textContent = listArray.filter(x => x[1] !== '').length;
+  if (listArray.filter(x => x[1] !== '').length > 0) {
+    deleteDoneBtn.classList.add("active");
+  } else {
+    deleteDoneBtn.classList.remove("active");
   }
   let newLiTag = "";
   listArray.forEach((element, index) => {
@@ -68,6 +75,14 @@ function deleteTask(index){
   let getLocalStorageData = localStorage.getItem("New Todo");
   listArray = JSON.parse(getLocalStorageData);
   listArray.splice(index, 1);
+  localStorage.setItem("New Todo", JSON.stringify(listArray));
+  showTasks();
+}
+
+function deleteDoneTasks() {
+  let getLocalStorageData = localStorage.getItem("New Todo");
+  listArray = JSON.parse(getLocalStorageData);
+  listArray = listArray.filter(x => x[1] === '');
   localStorage.setItem("New Todo", JSON.stringify(listArray));
   showTasks();
 }
